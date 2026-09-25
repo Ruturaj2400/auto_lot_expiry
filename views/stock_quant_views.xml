@@ -1,0 +1,18 @@
+<odoo>
+    <record id="view_inventory_adjustment_tree_inherit_prices" model="ir.ui.view">
+        <field name="name">stock.quant.inventory.tree.prices</field>
+        <field name="model">stock.quant</field>
+        <field name="inherit_id" ref="stock.view_stock_quant_tree_inventory_editable"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='product_id']" position="after">
+
+                <field name="cost" string="Cost"/>
+                <field name="sales_price" string="Sales Price"/>
+                <field name="purchase_price" string="Purchase Price"/>
+
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
